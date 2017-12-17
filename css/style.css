@@ -198,7 +198,7 @@ li{ list-style: none; }
 /* xs */
 @media (min-width: 0px){
 	#intro{
-		margin: 5em 0px;
+		margin: 1em 0px;
 	}
 	.links{
 		font-size: 1.2em;
