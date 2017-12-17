@@ -33,10 +33,12 @@ body, html {
 
 .blinking-circle{
 	animation: blink 1.5s infinite;
-	width:.8em;
-	height:.8em;
+	width:.6em;
+	height:.6em;
 	display: inline-block;
-	margin-right: 5px;
+	margin-left: 3px;
+	position: relative;
+	bottom: .05em;
 	background-color:#4caf50;
 	border-radius: 100%;
 }
@@ -44,7 +46,7 @@ body, html {
 	margin: 0px;
 	padding: 0px;
 }
-.bb{
+.bb {
 	margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-left: auto;
@@ -52,6 +54,9 @@ body, html {
     border-style: inset;
 	border-color: gray;
     border-width: 1px;
+}
+.border-bottom {
+	border-bottom: 2px solid #eee;
 }
 #fakeContainer{
 	height:100%;
@@ -67,14 +72,33 @@ a:hover{
 	color: inherit;
 }
 .date{ font-size:.79rem; }
-.underline{ border-bottom: 1px solid black; }
-.underline-a:hover{ border-bottom: 1px solid black; }
+.underline{ border-bottom: 1px solid #aaa; }
+.underline-a:hover{ border-bottom: 1px solid #aaa; }
+.underline-a-outline:hover{ 
+	text-decoration: underline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+.inline {
+	display: inline;
+}
 
 .me{
-	width:8em;
-	height:8em;
+	width:11em;
+	height:11em;
 	border-radius: 100%;
 }
+.t-small{
+	font-size: 14px !important; 
+}
+.title-line{
+	display: inline-block;
+	border-bottom: 1px solid #ccc;
+	width: inherit;
+}
+
 
 #mainContent{
 	overflow-y:scroll;
@@ -93,30 +117,73 @@ a:hover{
 	border: 1px solid #2E3032;
 	background-color: white;
 }
-.icon {
-  display: inline-block;
-  width: 1.3em;
-  height: 1.3em;
+.body-icon {
+	display: inline-block;
+  	width: 1em;
+  	height: 1em;
+	stroke-width: 0;
+	position: relative;
+	top: 2px;
+  	stroke: white;
+  	fill: #aaa;
+}
+
+.title-icon {
+  width: 1.3rem;
+  height: 1.3rem;
   stroke-width: 0;
   stroke: white;
-  fill: black;
+  fill: #555;
+}
+
+.icon {
+	display: inline-block;
+	width: 1.3em;
+	height: 1.3em;
+	stroke-width: 0;
+	stroke: white;
+	fill: inherit;
 	margin-right:10px;
 }
 .icon-np {
-  display: inline-block;
-  width: .8em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: white;
-  fill: black;
-	margin-right:10px;
+	display: inline-block;
+  	width: .7em;
+  	height: .9em;
+  	stroke-width: 0;
+  	stroke: white;
+  	fill: inherit;
+	margin-right:2px;
+	position: relative;
+	bottom: 2px;
+}
+.icon-ai {
+	display: inline-block;
+  	width: .7em;
+  	height: .7em;
+  	stroke-width: 0;
+  	stroke: white;
+  	fill: inherit;
+	margin-right:2px;
+	position: relative;
+	bottom: 2px;
 }
 
 li{ list-style: none; }
 .card { margin: 10px 10px; }
+
+.quicksand {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 800;
+}
+.extra-bold {
+	font-weight: 900;
+}
 .cbold{ font-family: "circular bold", "Helvetica Neue", Helvetica; }
-.ff{ font-family: "Circular bold", "Helvetica Neue", Helvetica; }
-.f2{ font-family: "ff", "Helvetica Neue", Helvetica; }
+.ff{ font-family: "circular-bold", "Helvetica Neue", Helvetica; }
+
+.f2{ 
+	font-family: "ff", "Helvetica Neue", Helvetica; }
+
 
 @font-face {
 	font-family: "circular-bold";
@@ -140,7 +207,7 @@ li{ list-style: none; }
 /* sm */
 @media (min-width: 768px){ }
 /* md */
-@media (min-width: 992px){
+@media (min-width: 768px){
 	.container-fluid{
 		min-height: 100%;
 		height:100%;
